@@ -23,6 +23,6 @@ import {
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  layout2Service = inject(LayoutService)
-  loadingService = inject(LoadingService)
+  readonly layoutService = inject(LayoutService)
+  readonly loadingService = inject(LoadingService)
 }

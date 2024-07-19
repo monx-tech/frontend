@@ -4,9 +4,9 @@ import { computed, Injectable, signal } from '@angular/core'
   providedIn: 'root',
 })
 export class LoadingService {
-  private loadingCount = signal(0)
+  private readonly loadingCount = signal(0)
 
-  isLoading = computed(() => this.loadingCount() > 0)
+  readonly isLoading = computed(() => this.loadingCount() > 0)
 
   set loading(loading: boolean) {
     if (loading) {

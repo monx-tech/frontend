@@ -25,9 +25,9 @@ import {MatDialog} from "@angular/material/dialog";
   styleUrl: './layout.component.scss',
 })
 export class LayoutComponent implements OnInit {
-  layoutService = inject(LayoutService)
-  dimensionsService = inject(DimensionsService)
-  dialogService = inject(MatDialog)
+  readonly layoutService = inject(LayoutService)
+  readonly dimensionsService = inject(DimensionsService)
+  readonly dialogService = inject(MatDialog)
 
   ngOnInit(): void {
     this.dialogService.open(AuthComponent, {

@@ -13,9 +13,9 @@ import {MatButtonModule} from "@angular/material/button";
   styleUrl: './toggle-sidebar-button.component.scss'
 })
 export class ToggleSidebarButtonComponent {
-  iconClose = input<string>('close')
-  icon = input.required<string>()
-  isOpen = input.required<boolean>()
+  readonly iconClose = input<string>('close')
+  readonly icon = input.required<string>()
+  readonly isOpen = input.required<boolean>()
 
-  onButtonClick = output()
+  readonly onButtonClick = output()
 }

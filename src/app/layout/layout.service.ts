@@ -11,13 +11,15 @@ type MenuItem = {
   providedIn: 'root'
 })
 export class LayoutService {
-  dimensionsService = inject(DimensionsService)
+  readonly dimensionsService = inject(DimensionsService)
 
-  sidebarLeftOpen = signal(this.dimensionsService.isDesktop())
-  sidebarRightOpen = signal(false)
-
-  title = signal('MonxTech')
-  menuItems = signal<MenuItem[]>([])
+  readonly title = signal('MonxTech')
+  readonly menuItems = signal<MenuItem[]>([])
+  readonly sidebarLeftOpen = signal(this.dimensionsService.isDesktop())
+  readonly sidebarRightOpen = signal(false)
+  readonly sidebarLeftIcon = signal('menu')
+  readonly sidebarRightIcon = signal('person')
+  readonly sidebarMode = computed(() => this.dimensionsService.isMobile() ? 'push' : 'side')
 
   onChangeDimensions = effect(() => {
     if (this.dimensionsService.isMobile()) {
@@ -26,8 +28,6 @@ export class LayoutService {
   }, {
     allowSignalWrites: true
   })
-
-  sidebarMode = computed(() => this.dimensionsService.isMobile() ? 'push' : 'side')
 
   toggleSidebar() {
     this.sidebarLeftOpen.update((value) => !value)
@@ -42,6 +42,5 @@ export class LayoutService {
     this.sidebarRightOpen.set(false)
   }
 
-  sidebarLeftIcon = signal('menu')
-  sidebarRightIcon = signal('person')
+
 }

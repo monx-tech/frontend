@@ -4,7 +4,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 import {IconComponent} from "../icon/icon.component";
 
 @Component({
-  selector: 'app-icon-button',
+  selector: 'app-footer-button',
   standalone: true,
   imports: [
     MatIconModule,
@@ -12,11 +12,11 @@ import {IconComponent} from "../icon/icon.component";
     RouterLinkActive,
     IconComponent
   ],
-  templateUrl: './icon-button.component.html',
-  styleUrl: './icon-button.component.scss'
+  templateUrl: './footer-button.component.html',
+  styleUrl: './footer-button.component.scss'
 })
-export class IconButtonComponent {
-  icon = input.required()
-  label = input.required()
-  href = input.required()
+export class FooterButtonComponent {
+  readonly icon = input.required()
+  readonly label = input.required()
+  readonly href = input.required()
 }

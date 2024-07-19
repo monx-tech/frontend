@@ -1,15 +1,15 @@
 <mat-toolbar class="flex justify-between items-center">
   <app-toggle-sidebar-button
-    (onButtonClick)="layout2Service.toggleSidebar()"
-    [isOpen]="layout2Service.sidebarLeftOpen()"
-    [icon]="layout2Service.sidebarLeftIcon()"
+    (onButtonClick)="layoutService.toggleSidebar()"
+    [isOpen]="layoutService.sidebarLeftOpen()"
+    [icon]="layoutService.sidebarLeftIcon()"
   />
-  <span class="flex flex-1 pt-1">{{layout2Service.title()}}</span>
+  <span class="flex flex-1 pt-1">{{layoutService.title()}}</span>
 
   <app-toggle-sidebar-button
-    (onButtonClick)="layout2Service.toggleSidebarRight()"
-    [isOpen]="layout2Service.sidebarRightOpen()"
-    [icon]="layout2Service.sidebarRightIcon()"
+    (onButtonClick)="layoutService.toggleSidebarRight()"
+    [isOpen]="layoutService.sidebarRightOpen()"
+    [icon]="layoutService.sidebarRightIcon()"
   />
 </mat-toolbar>
 

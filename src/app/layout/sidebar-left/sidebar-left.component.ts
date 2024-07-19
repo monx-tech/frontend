@@ -16,8 +16,8 @@ import {IconComponent} from "../components/icon/icon.component";
   styleUrl: './sidebar-left.component.scss'
 })
 export class SidebarLeftComponent {
-  layoutService = inject(LayoutService)
-  dimensionsService = inject(DimensionsService)
+  readonly layoutService = inject(LayoutService)
+  readonly dimensionsService = inject(DimensionsService)
 
   closeIfMobile() {
     if (this.dimensionsService.isMobile()) {

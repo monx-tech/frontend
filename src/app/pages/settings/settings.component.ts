@@ -10,14 +10,9 @@ const MENU_ITEMS = [
     routerLink: 'home'
   },
   {
-    label: 'Home',
-    icon: 'home',
-    routerLink: 'home'
-  },
-  {
-    label: 'Home',
-    icon: 'home',
-    routerLink: 'home'
+    label: 'Settings',
+    icon: 'settings',
+    routerLink: 'settings'
   },
 ];
 

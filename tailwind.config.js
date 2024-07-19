@@ -2,9 +2,8 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: process.env.TAILWIND_MODE ? 'jit' : undefined,
-  purge: [
-    "./src/**/*.{html,ts,scss}",
+  content: [
+    "./src/**/*.{html,ts}",
   ],
   theme: {
     fontFamily: {
@@ -18,6 +17,9 @@ module.exports = {
       'xl': '1920px',
     },
     // TODO: Add material color palette
+    colors: {
+      'button-ripple': 'var(--mat-protected-button-ripple-color)',
+    }
   },
   plugins: [],
 };

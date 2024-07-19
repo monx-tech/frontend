@@ -11,8 +11,8 @@ import {MatIconModule} from "@angular/material/icon";
   styleUrl: './icon.component.scss'
 })
 export class IconComponent {
-  fill = input(false)
-  weight = input(200)
+  readonly fill = input(false)
+  readonly weight = input(200)
 
   variation = computed(() => `'FILL' ${this.fill() ? 1 : 0}, 'wght' ${this.weight()}`)
 }
